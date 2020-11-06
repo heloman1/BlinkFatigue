@@ -27,11 +27,13 @@ namespace BlinkFatigue
             Singleton = this;
             Functions = new Methods(this);
 
-            Log.Info("Setting up method thing");
-            foreach (MethodBase method in Events.Instance.Harmony.GetPatchedMethods())
-                if (method.DeclaringType == null || method.Name == "FixedUpdate")
-                    Events.DisabledPatchesHashSet.Add(method);
-            Log.Info("Added to disabled patches");
+            // Disabling EXILED Event patches
+            // This feature is currently no longer implemented (?)
+            //Log.Info("Setting up method thing");
+            //foreach (MethodBase method in Events.Instance.Harmony.GetPatchedMethods())
+            //    if (method.DeclaringType == null || method.Name == "FixedUpdate")
+            //        Events.DisabledPatchesHashSet.Add(method);
+            //Log.Info("Added to disabled patches");
             try
             {
                 Exiled.Events.Events.Instance.ReloadDisabledPatches();
