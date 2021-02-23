@@ -11,14 +11,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="0Harmony.dlll" HintPath=".\References\0Harmony.dll" />
-    <Reference Include="Assembly-CSharp-Publicized.dlll" HintPath=".\References\Assembly-CSharp-Publicized.dll" />
-    <Reference Include="Exiled.API.dlll" HintPath=".\References\Exiled.API.dll" />
-    <Reference Include="Exiled.Events.dlll" HintPath=".\References\Exiled.Events.dll" />
-    <Reference Include="Exiled.Loader.dlll" HintPath=".\References\Exiled.Loader.dll" />
-    <Reference Include="Exiled.Permissions.dlll" HintPath=".\References\Exiled.Permissions.dll" />
-    <Reference Include="Exiled.Updater.dlll" HintPath=".\References\Exiled.Updater.dll" />
-    <Reference Include="YamlDotNet.dlll" HintPath=".\References\YamlDotNet.dll" />
+    <Reference Include="YamlDotNet" HintPath=".\References\YamlDotNet.dll" />
+    <Reference Include="Lib.Harmony" HintPath=".\References\0Harmony.dll" />
+
+    <Reference Include="Exiled.API.dll" HintPath=".\References\Exiled.API.dll" />
+    <Reference Include="Exiled.Events.dll" HintPath=".\References\Exiled.Events.dll" />
+    <Reference Include="Exiled.Loader.dll" HintPath=".\References\Exiled.Loader.dll" />
+    <Reference Include="Exiled.Permissions.dll" HintPath=".\References\Exiled.Permissions.dll" />
+    <Reference Include="Exiled.Updater.dll" HintPath=".\References\Exiled.Updater.dll" />
+
+    <Reference Include="Assembly-CSharp-Publicized.dll" HintPath=".\References\Assembly-CSharp-Publicized.dll" />
     <Reference Include="Mirror" HintPath="..\References\Mirror.dll" />
     <Reference Include="UnityEngine.CoreModule" HintPath="..\References\UnityEngine.CoreModule.dll" />
     <Reference Include="UnityEngine" HintPath="..\References\UnityEngine.CoreModule.dll" />
