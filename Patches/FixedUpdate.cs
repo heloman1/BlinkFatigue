@@ -22,15 +22,19 @@ namespace BlinkFatigue.Patches
             {
                 Scp173PlayerScript playerScript = player.ReferenceHub.characterClassManager.Scp173;
 
-                if (!playerScript.SameClass && (player.Role != RoleType.Tutorial || Events.Instance.Config.CanTutorialBlockScp173) && playerScript.LookFor173(__instance.gameObject, true) && __instance.LookFor173(player.GameObject, false))
+                if (!playerScript.SameClass && // Is not an 173 (?)
+                 (player.Role != RoleType.Tutorial || // Is not Tutorial
+                 Events.Instance.Config.CanTutorialBlockScp173) && // Is Tutorial but can block
+                  playerScript.LookFor173(__instance.gameObject, true) // Check if player is looking at 173
+                   && __instance.LookFor173(player.GameObject, false)) // ????
                 {
                     __instance.AllowMove = false;
                     Plugin.Singleton.SomeoneIsLooking = true;
                     break;
                 }
             }
-            
-            if (!Plugin.Singleton.SomeoneIsLooking) 
+
+                        if (!Plugin.Singleton.SomeoneIsLooking)
                 Plugin.Singleton.Functions.SubtractTime(UnityEngine.Time.fixedDeltaTime * Plugin.Singleton.Config.DecreaseRate);
 
             return false;
